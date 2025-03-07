@@ -28,7 +28,7 @@ body::after {
     height: 82%;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 20px;
-    margin: 20px auto; /* توسيط الكونتينر */
+    margin: 20px auto; 
     padding: 20px;
     position: relative;
     overflow: hidden;
@@ -102,34 +102,58 @@ nav {
     width: 400px;
 
 }
-
+/* Dropdown Icon */
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+/* Responsive Design */
 @media (max-width: 950px) {
-    .content, nav {
-        flex-direction: column;
-    }
-
-    .content .image, .content .text {
-        width: 100%;
-        text-align: center;
-    }
-
-    .content .image img {
-        width: 80%;
-        max-width: 400px;
-    }
-
-    body::after {
-        clip-path: circle(40% at bottom);
-    }
-
     nav {
         position: static;
         width: 100%;
     }
-
+    
+    .menu-icon {
+        display: block;
+    }
+    
     .nav-links {
+        display: none;
         flex-direction: column;
         align-items: center;
+        background: rgba(0, 0, 0, 0.9);
+        position: absolute;
+        top: 60px;
+        width: 100%;
+        left: 0;
+        padding: 10px 0;
+    }
+    
+    .nav-links.active {
+        display: flex;
+    }
+    
+    .content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .content .image, .content .text {
+        width: 100%;
+    }
+    
+    .content .image img {
+        width: 80%;
+        max-width: 400px;
+    }
+    
+    body::after {
+        clip-path: circle(40% at bottom);
     }
 }
 
@@ -137,7 +161,7 @@ nav {
     .content .text h2 {
         font-size: 30px;
     }
-
+    
     .content .text p {
         font-size: 16px;
     }

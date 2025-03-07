@@ -5,11 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Adidas</title>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Adidas</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const menuIcon = document.querySelector(".menu-icon");
+            const navLinks = document.querySelector(".nav-links");
+            
+            menuIcon.addEventListener("click", function () {
+                navLinks.classList.toggle("active");
+            });
+        });
+    </script>
 </head>
 <body>
     <div class="container">
         <nav>
             <a href="#" class="logo">Adidas</a>
+            <button class="menu-icon">&#9776;</button>
             <ul class="nav-links">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Men</a></li>
